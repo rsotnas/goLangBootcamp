@@ -65,9 +65,11 @@ func main() {
 
 	if u != user && u != user2 {
 		fmt.Printf(errUser, u)
-	} else if p != pass && p != pass2 {
-		fmt.Printf(errPwd, u)
-	} else {
+	} else if u == user && p == pass {
 		fmt.Printf(accessOK, u)
+	} else if u == user2 && p == pass2 {
+		fmt.Printf(accessOK, u)
+	} else {
+		fmt.Printf(errPwd, u)
 	}
 }
